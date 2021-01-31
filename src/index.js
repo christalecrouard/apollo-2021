@@ -1,12 +1,15 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './components/App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./components/App";
+import client  from "./apollo";
+import {ApolloProvider} from "@apollo/client";
+//import reportWebVitals from './reportWebVitals';
+import {ApolloClient} from '@apollo/client';
 
 ReactDOM.render(
-  <React.StrictMode>
+  <ApolloProvider client={client}>
     <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+  </ApolloProvider>,
+  document.getElementById("root")
 );
-reportWebVitals();
+//reportWebVitals();
